@@ -1,0 +1,44 @@
+<!doctype html>
+<html data-ng-app="Histograph" data-ng-csp="">
+  <head>
+    <meta charset="UTF-8">
+    <title>Histograph</title>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,700,600' rel='stylesheet' type='text/css'> -->
+    <link rel="stylesheet" href="app/stylesheets/screen.css">
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <script src="./bower_components/lodash/lodash.min.js"></script>
+    <script src="./bower_components/moment/min/moment.min.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./app/js/history.js"></script>
+    <script src="./app/services/d3.js"></script>
+    <script src="./app/app.js"></script>
+    <script src="./app/controllers/main.js"></script>
+    <script src="./app/directives/graphs/bars.js"></script>
+    <script src="./app/directives/graphs/sunburst.js"></script>
+    <script src="./app/controllers/history.js"></script>
+    <script src="./app/controllers/downloads.js"></script>
+    <!-- // <script src="./bower_components/d3/d3.js"></script> -->
+    <script src="./app/services/history.js"></script>
+    <script src="./app/services/downloads.js"></script>
+    <script src="./app/directives/historyitem.js"></script>
+    <script src="./app/directives/downloaditem.js"></script>
+  </head>
+  <body class="flexy col">
+
+    <div id="main-controller" class="flexy col grow" ng-controller="MainCtrl">
+      <div class="title-section no-shrink flexy space-b">
+        <h1><a ui-sref="home" class="pad">Histograph</a></h1>
+        <input type="text" class="grow"
+               ng-model="mainSearch"
+               ng-keyup="setFilter($event)"
+               ng-show="showSearch">
+      </div>
+
+      <div class="flexy overflow grow" ui-view></div>
+
+    </div>
+
+  </body>
+</html>
+

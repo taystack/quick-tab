@@ -1,0 +1,297 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 120, ../sass/mixins.scss */
+.flexy {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: flex;
+}
+
+/* line 123, ../sass/mixins.scss */
+.col {
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+/* line 126, ../sass/mixins.scss */
+.space-b {
+  -ms-flex-pack: space-between;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* line 129, ../sass/mixins.scss */
+.space-a {
+  -ms-flex-pack: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+/* line 132, ../sass/mixins.scss */
+.v-align {
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 135, ../sass/mixins.scss */
+.h-align {
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+/* line 138, ../sass/mixins.scss */
+.no-shrink {
+  -ms-flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  flex-shrink: 0;
+}
+
+/* line 141, ../sass/mixins.scss */
+.grow {
+  -ms-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+/* line 144, ../sass/mixins.scss */
+.no-grow {
+  -ms-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  flex-grow: 0;
+}
+
+/* line 151, ../sass/mixins.scss */
+.abs {
+  position: absolute;
+}
+
+/* line 154, ../sass/mixins.scss */
+.pad {
+  padding: 15px;
+}
+
+/* line 157, ../sass/mixins.scss */
+.frost {
+  -webkit-filter: blur(20px);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='20');
+}
+
+/* line 162, ../sass/mixins.scss */
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 167, ../sass/mixins.scss */
+.card-item {
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* line 172, ../sass/mixins.scss */
+.small {
+  font-size: 12px;
+}
+
+/* line 175, ../sass/mixins.scss */
+.grey {
+  color: #444;
+}
+
+/* line 1, ../sass/animations.scss */
+.item-anim.ng-enter, .item-anim.ng-move {
+  -webkit-transition: 0.5s linear all;
+  -moz-transition: 0.5s linear all;
+  -o-transition: 0.5s linear all;
+  transition: 0.5s linear all;
+  opacity: 0;
+}
+
+/*
+ The ng-enter-active and ng-move-active
+ are where the transition destination properties
+ are set so that the animation knows what to
+ animate.
+*/
+/* line 15, ../sass/animations.scss */
+.item-anim.ng-enter.ng-enter-active,
+.item-anim.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+/*
+  We're using CSS keyframe animations for when
+  the leave event is triggered for the element
+  that has the .item-anim class
+*/
+/* line 25, ../sass/animations.scss */
+.item-anim.ng-leave {
+  -webkit-animation: 0.5s my_animation;
+  -moz-animation: 0.5s my_animation;
+  -o-animation: 0.5s my_animation;
+  animation: 0.5s my_animation;
+}
+
+@keyframes my_animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/*
+  Unfortunately each browser vendor requires
+  its own definition of keyframe animation code...
+*/
+@-webkit-keyframes my_animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes my_animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-o-keyframes my_animation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* line 1, ../sass/body.scss */
+body {
+  background: #fff;
+  padding: 10px;
+  height: 100vh;
+  overflow: hidden;
+  max-height: 100vh;
+  min-height: 500px;
+  color: #dedede;
+  font-family: 'Open Sans', sans-serif;
+}
+/* line 11, ../sass/body.scss */
+body h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+/* line 17, ../sass/body.scss */
+body h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* line 23, ../sass/body.scss */
+body b {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+/* line 27, ../sass/body.scss */
+body ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 32, ../sass/body.scss */
+body a {
+  color: #9C9CCE;
+  text-decoration: none;
+}
+/* line 37, ../sass/body.scss */
+body a:hover {
+  text-decoration: underline;
+}
+/* line 43, ../sass/body.scss */
+body .sidebar .pad {
+  padding: 8px 15px;
+}
+/* line 46, ../sass/body.scss */
+body .sidebar .pad:first-child {
+  margin-top: 7px;
+}
+/* line 51, ../sass/body.scss */
+body .table-item {
+  margin-bottom: 10px;
+}
+/* line 54, ../sass/body.scss */
+body .table-item.pad {
+  padding: 8px 15px;
+}
+/* line 57, ../sass/body.scss */
+body .table-item.pad:first-child {
+  margin-top: 7px;
+}
+/* line 61, ../sass/body.scss */
+body .table-item b {
+  font-size: 20px;
+}
+/* line 66, ../sass/body.scss */
+body .split-container > * {
+  -ms-flex-basis: 50%;
+  -webkit-flex-basis: 50%;
+  flex-basis: 50%;
+}
+
+/* line 70, ../sass/body.scss */
+#main-controller {
+  z-index: 1000;
+}
+
+/* line 73, ../sass/body.scss */
+#histotable {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+/* line 1, ../sass/widget.scss */
+.widget {
+  height: 280px;
+  -ms-flex-basis: 40%;
+  -webkit-flex-basis: 40%;
+  flex-basis: 40%;
+  background: rgba(51, 51, 51, 0.5);
+}
+/* line 6, ../sass/widget.scss */
+.widget h3 {
+  padding-bottom: 10px;
+}
+/* line 10, ../sass/widget.scss */
+.widget > * {
+  padding: 15px;
+}
+/* line 12, ../sass/widget.scss */
+.widget > *:first-child {
+  padding-bottom: 0;
+}
+/* line 15, ../sass/widget.scss */
+.widget > *:last-child {
+  padding-top: 0;
+}
+/* line 20, ../sass/widget.scss */
+.widget ul li {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px 0;
+}

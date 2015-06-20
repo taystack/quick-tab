@@ -1,0 +1,177 @@
+@mixin display($value) {
+  @if $value == inline-flex {
+    // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+    display: -ms-inline-flexbox;
+
+    display: -webkit-inline-flex;
+
+    display: inline-flex;
+  }
+
+  @else if $value == flex {
+    // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+    display: -ms-flexbox;
+
+    display: -webkit-flex;
+
+    display: flex;
+  }
+
+  display: $value;
+}
+
+@mixin flex-direction($direction: row) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex-direction: $direction;
+
+  -webkit-flex-direction: $direction;
+
+  flex-direction: $direction;
+}
+
+@mixin align-items($alignment: flex-start) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex-align: $alignment;
+  @if $alignment == flex-start {
+    // IE10
+    -ms-flex-align: start;
+  } @else if $alignment == flex-end {
+    // IE10
+    -ms-flex-align: end;
+  }
+
+  -webkit-align-items: $alignment;
+
+  align-items: $alignment;
+}
+
+@mixin justify-content($justification: flex-start) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex-pack: $justification;
+  @if $justification == flex-start {
+    // IE10
+    -ms-flex-pack: start;
+  } @else if $justification == flex-end {
+    // IE10
+    -ms-flex-pack: end;
+  } @else if $justification == space-between {
+    // IE10
+    -ms-flex-pack: justify;
+  }
+
+  -webkit-justify-content: $justification;
+
+  justify-content: $justification;
+}
+
+@mixin flex-wrap($wrap-state: nowrap) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex-wrap: $wrap-state;
+  @if $wrap-state == nowrap {
+    // IE10
+    -ms-flex-wrap: none;
+  }
+
+  -webkit-flex-wrap: $wrap-state;
+
+  flex-wrap: $wrap-state;
+}
+
+@mixin flex($flex...) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex: $flex;
+
+  flex: $flex;
+}
+
+@mixin flex-order($order: 0) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex-order: $order;
+
+  -webkit-flex-order: $order;
+
+  flex-order: $order;
+}
+@mixin flex-shrink($shrink: 0) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex-shrink: $shrink;
+
+  -webkit-flex-shrink: $shrink;
+
+  flex-shrink: $shrink;
+}
+@mixin flex-grow($grow: 0) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex-grow: $grow;
+
+  -webkit-flex-grow: $grow;
+
+  flex-grow: $grow;
+}
+@mixin flex-basis($basis: 100%) {
+  // http://msdn.microsoft.com/en-us/library/ie/hh673531(v=vs.85).aspx
+  -ms-flex-basis: $basis;
+
+  -webkit-flex-basis: $basis;
+
+  flex-basis: $basis;
+}
+
+.flexy {
+  @include display(flex);
+}
+.col {
+  @include flex-direction(column);
+}
+.space-b {
+  @include justify-content(space-between);
+}
+.space-a {
+  @include justify-content(space-around);
+}
+.v-align {
+  @include align-items(center);
+}
+.h-align {
+  @include justify-content(center);
+}
+.no-shrink {
+  @include flex-shrink;
+}
+.grow {
+  @include flex-grow(1);
+}
+.no-grow {
+  @include flex-grow(0);
+}
+.overflow {
+  // text-overflow: hidden;
+  // overflow-y: scroll;
+}
+.abs {
+  position: absolute;
+}
+.pad {
+  padding: 15px;
+}
+.frost {
+  -webkit-filter: blur(20px);
+  filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='20');
+  // opacity: .5;
+}
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-item {
+  background: rgba(255,255,255,.3);
+  border-bottom: 1px solid rgba(0,0,0,.2);
+  box-shadow: 0px 2px 2px 0 rgba(0,0,0,.16);
+}
+.small {
+  font-size: 12px;
+}
+.grey {
+  color: $light-grey;
+}

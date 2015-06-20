@@ -1,0 +1,44 @@
+<div class="flexy grow v-align">
+  <div class="widget-container flexy space-a center grow">
+
+    <div class="widget card-item no-shrink no-grow">
+      <div class="widget-title flexy">
+        <h3><a ui-sref="topSites" class="">Top Sites</a></h3>
+      </div>
+
+      <ul>
+        <li class="widget-item"
+            ng-repeat="item in tsItems | filter:mainSearch | limitTo:5">
+          {{item.url}}
+        </li>
+      </ul>
+    </div>
+
+<!--     <div class="widget card-item no-shrink no-grow">
+      <div class="widget-title flexy">
+        <h3><a ui-sref="history" class="">History</a></h3>
+      </div>
+
+      <ul>
+        <li class="widget-item"
+            ng-repeat="item in hItems | filter:mainSearch | limitTo:5">
+          {{item.url}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="widget card-item no-shrink no-grow">
+      <div class="widget-title flexy">
+        <h3><a ui-sref="downloads" class="">Downloads</a></h3>
+      </div>
+
+      <ul>
+        <li class="widget-item"
+            ng-repeat="item in dItems | filter:mainSearch | limitTo:5">
+          {{item.url}}
+        </li>
+      </ul>
+    </div>
+ -->
+  </div>
+</div>

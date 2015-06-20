@@ -1,0 +1,7 @@
+<div class="table-container" ng-controller="DownloadsCtrl">
+  <ul id="histotable">
+    <li class="table-item pad item-anim" ng-repeat="item in downloadItems | orderBy:startTime">
+      <downloaditem item="item"></downloaditem>
+    </li>
+  </ul>
+</div>

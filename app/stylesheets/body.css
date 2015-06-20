@@ -1,0 +1,73 @@
+/*
+Error: Undefined variable: "$font-color".
+        on line 8 of /home/tstackpole/Workspace/projects/histographs/app/sass/body.scss
+
+3:   padding: 10px;
+4:   height: 100vh;
+5:   overflow: hidden;
+6:   max-height: 100vh;
+7:   min-height: 500px;
+8:   color: $font-color;
+9:   font-family: 'Open Sans', sans-serif;
+10: 
+11:   h1 {
+12:     padding: 0;
+13:     margin: 0;
+
+Backtrace:
+/home/tstackpole/Workspace/projects/histographs/app/sass/body.scss:8
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$font-color\".\A         on line 8 of /home/tstackpole/Workspace/projects/histographs/app/sass/body.scss\A \A 3:   padding: 10px;\A 4:   height: 100vh;\A 5:   overflow: hidden;\A 6:   max-height: 100vh;\A 7:   min-height: 500px;\A 8:   color: $font-color;\A 9:   font-family: 'Open Sans', sans-serif;\A 10: \A 11:   h1 {\A 12:     padding: 0;\A 13:     margin: 0;"; }

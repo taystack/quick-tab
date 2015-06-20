@@ -1,0 +1,76 @@
+body {
+  background: #fff;
+  padding: 10px;
+  height: 100vh;
+  overflow: hidden;
+  max-height: 100vh;
+  min-height: 500px;
+  color: $font-color;
+  font-family: 'Open Sans', sans-serif;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  b {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: $href-color;
+    text-decoration: none;
+    // text-shadow: 0 1px 1px rgba(255,255,255,.2);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .sidebar {
+    .pad {
+      padding: 8px 15px;
+
+      &:first-child {
+        margin-top: 7px;
+      }
+    }
+  }
+  .table-item {
+    margin-bottom: 10px;
+
+    &.pad {
+      padding: 8px 15px;
+
+      &:first-child {
+        margin-top: 7px;
+      }
+    }
+    b {
+      font-size: 20px;
+    }
+  }
+
+  .split-container > * {
+    @include flex-basis(50%);
+  }
+}
+#main-controller {
+  z-index: 1000;
+}
+#histotable {
+  overflow: hidden;
+  overflow-y: scroll;
+}

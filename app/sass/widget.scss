@@ -1,0 +1,26 @@
+.widget {
+  height: 280px;
+  @include flex-basis(40%);
+  background: rgba(#333, .5);
+
+  h3 {
+    padding-bottom: 10px;
+  }
+
+  > * {
+    padding: 15px;
+    &:first-child {
+      padding-bottom: 0;
+    }
+    &:last-child {
+      padding-top: 0;
+    }
+  }
+
+  ul li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 0;
+  }
+}

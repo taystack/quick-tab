@@ -1,0 +1,17 @@
+<div class="table-container flexy col grow" ng-controller="HistoryCtrl">
+  <div class="flexy no-shrink context-menu pad v-align space-b">
+    <div></div>
+    <i class="">Showing {{ fhItems.length }} of {{ hItems.length }}</i>
+  </div>
+  <div class="split-container flexy grow">
+    <div class="grow flexy col no-shrink" ng-controller="HistoryGraphCtrl">
+      <!-- <d3-bars data="hItems" key="dataKey" template-id="history-graph" class="grow"></d3-bars> -->
+      <d3-sunburst data="flareData" class="flexy h-align"></d3-sunburst>
+    </div>
+    <ul id="histotable" class="grow">
+      <li class="table-item pad item-anim" ng-repeat="item in fhItems = (hItems | orderBy:'-lastVisitTime' | filter:filter)">
+        <historyitem item="item"></historyitem>
+      </li>
+    </ul>
+  </div>
+</div>
