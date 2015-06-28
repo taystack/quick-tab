@@ -12,6 +12,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$compileProvider', function
     url: '/',
     templateUrl: 'app/templates/home.html'
   })
+  .state('windows', {
+    url: '/windows',
+    templateUrl: 'app/templates/windows/WindowCollection.html'
+  })
   .state('history', {
     url: '/history',
     templateUrl: 'app/templates/history/HistoryTable.html'

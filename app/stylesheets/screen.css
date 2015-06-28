@@ -185,80 +185,80 @@ body {
   overflow: hidden;
   max-height: 100vh;
   min-height: 500px;
-  color: #dedede;
+  color: #333;
   font-family: 'Open Sans', sans-serif;
 }
-/* line 11, ../sass/body.scss */
+/* line 12, ../sass/body.scss */
 body h1 {
   padding: 0;
   margin: 0;
   font-size: 30px;
   font-weight: bold;
 }
-/* line 17, ../sass/body.scss */
+/* line 18, ../sass/body.scss */
 body h3 {
   padding: 0;
   margin: 0;
   font-size: 20px;
   font-weight: bold;
 }
-/* line 23, ../sass/body.scss */
+/* line 24, ../sass/body.scss */
 body b {
   font-weight: 600;
   margin-bottom: 5px;
 }
-/* line 27, ../sass/body.scss */
+/* line 28, ../sass/body.scss */
 body ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* line 32, ../sass/body.scss */
+/* line 33, ../sass/body.scss */
 body a {
   color: #9C9CCE;
   text-decoration: none;
 }
-/* line 37, ../sass/body.scss */
+/* line 38, ../sass/body.scss */
 body a:hover {
   text-decoration: underline;
 }
-/* line 43, ../sass/body.scss */
+/* line 44, ../sass/body.scss */
 body .sidebar .pad {
   padding: 8px 15px;
 }
-/* line 46, ../sass/body.scss */
+/* line 47, ../sass/body.scss */
 body .sidebar .pad:first-child {
   margin-top: 7px;
 }
-/* line 51, ../sass/body.scss */
+/* line 52, ../sass/body.scss */
 body .table-item {
   margin-bottom: 10px;
 }
-/* line 54, ../sass/body.scss */
+/* line 55, ../sass/body.scss */
 body .table-item.pad {
   padding: 8px 15px;
 }
-/* line 57, ../sass/body.scss */
+/* line 58, ../sass/body.scss */
 body .table-item.pad:first-child {
   margin-top: 7px;
 }
-/* line 61, ../sass/body.scss */
+/* line 62, ../sass/body.scss */
 body .table-item b {
   font-size: 20px;
 }
-/* line 66, ../sass/body.scss */
+/* line 67, ../sass/body.scss */
 body .split-container > * {
   -ms-flex-basis: 50%;
   -webkit-flex-basis: 50%;
   flex-basis: 50%;
 }
 
-/* line 70, ../sass/body.scss */
+/* line 71, ../sass/body.scss */
 #main-controller {
   z-index: 1000;
 }
 
-/* line 73, ../sass/body.scss */
+/* line 74, ../sass/body.scss */
 #histotable {
   overflow: hidden;
   overflow-y: scroll;

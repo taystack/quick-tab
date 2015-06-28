@@ -22,7 +22,8 @@
     "downloads.open",
     "storage",
     "topSites",
-    "tabs"
+    "tabs",
+    "processes"
   ],
   "background": {
     "scripts": ["bower_components/angular/angular.js",

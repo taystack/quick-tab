@@ -1,24 +1,35 @@
 /*
-Error: Undefined variable: "$font-color".
-        on line 8 of /home/tstackpole/Workspace/projects/histographs/app/sass/body.scss
+Error: Undefined variable: "$href-color".
+        on line 34 of /home/tstackpole/Workspace/projects/histographs/app/sass/body.scss
 
-3:   padding: 10px;
-4:   height: 100vh;
-5:   overflow: hidden;
-6:   max-height: 100vh;
-7:   min-height: 500px;
-8:   color: $font-color;
-9:   font-family: 'Open Sans', sans-serif;
-10: 
-11:   h1 {
-12:     padding: 0;
-13:     margin: 0;
+29:     list-style-type: none;
+30:     margin: 0;
+31:     padding: 0;
+32:   }
+33:   a {
+34:     color: $href-color;
+35:     text-decoration: none;
+36:     // text-shadow: 0 1px 1px rgba(255,255,255,.2);
+37: 
+38:     &:hover {
+39:       text-decoration: underline;
 
 Backtrace:
-/home/tstackpole/Workspace/projects/histographs/app/sass/body.scss:8
+/home/tstackpole/Workspace/projects/histographs/app/sass/body.scss:34
 /home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/script/tree/variable.rb:49:in `_perform'
 /home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/script/tree/node.rb:50:in `perform'
 /home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `map'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
 /home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
 /home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /home/tstackpole/.rvm/gems/ruby-2.1.5/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
@@ -70,4 +81,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$font-color\".\A         on line 8 of /home/tstackpole/Workspace/projects/histographs/app/sass/body.scss\A \A 3:   padding: 10px;\A 4:   height: 100vh;\A 5:   overflow: hidden;\A 6:   max-height: 100vh;\A 7:   min-height: 500px;\A 8:   color: $font-color;\A 9:   font-family: 'Open Sans', sans-serif;\A 10: \A 11:   h1 {\A 12:     padding: 0;\A 13:     margin: 0;"; }
+  content: "Error: Undefined variable: \"$href-color\".\A         on line 34 of /home/tstackpole/Workspace/projects/histographs/app/sass/body.scss\A \A 29:     list-style-type: none;\A 30:     margin: 0;\A 31:     padding: 0;\A 32:   }\A 33:   a {\A 34:     color: $href-color;\A 35:     text-decoration: none;\A 36:     // text-shadow: 0 1px 1px rgba(255,255,255,.2);\A 37: \A 38:     &:hover {\A 39:       text-decoration: underline;"; }
