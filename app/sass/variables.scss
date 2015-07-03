@@ -4,11 +4,16 @@ $color-scheme: 'dark';
   // $font-color: #151515;
   // $href-color: #35354F;
 // } @else {
-  $font-color: #dedede;
+  $font-color: #333;
   $href-color: #9C9CCE;
 // }
 
+$button-background: #eee;
+$fa-font-path: "../../bower_components/font-awesome/fonts";
 $light-grey: #444;
 $purple: #512C73;
 $purple-light: #6F3D8F;
 $purple-lightest: #9277AC;
+
+// Font sizes
+$large-font-size: 20px;

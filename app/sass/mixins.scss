@@ -116,7 +116,40 @@
 
   flex-basis: $basis;
 }
+@mixin transform($transformation...) {
+  -webkit-transform: $transformation;
 
+  transform: $transformation;
+}
+@mixin transform-origin($origin...) {
+  -webkit-transform-origin: $origin;
+
+  transform-origin: $origin;
+}
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+
+  transition: $transition;
+}
+@mixin btn($background, $color) {
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(center);
+  background: $background;
+  color: $color;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 5px;
+
+  @include transition(background ease-in-out 150ms);
+
+  &:hover {
+    background: darken($background, 5%);
+  }
+}
+.btn {
+  @include btn($button-background, $font-color);
+}
 .flexy {
   @include display(flex);
 }
@@ -153,6 +186,21 @@
 }
 .pad {
   padding: 15px;
+}
+.ml4 {
+  margin-left: 4px;
+}
+.mr4 {
+  margin-right: 4px;
+}
+.mt4 {
+  margin-top: 4px;
+}
+.mt8 {
+  margin-top: 8px;
+}
+.cursor {
+  cursor: pointer;
 }
 .frost {
   -webkit-filter: blur(20px);

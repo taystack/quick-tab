@@ -1,12 +1,12 @@
-<div class="flexy col">
+<div class="flexy col line-item">
   <div class="flexy v-align">
     <b class="">{{ titleOrHostname(item) }} - <i>{{ item.visitCount }} visit{{item.visitCount > 1 ? 's' : ''}}</i></b>
   </div>
   <a class="ellipsis" href="{{ item.url }}"><i>{{ item.url }}</i></a>
-  <span class="small"><span class="grey">Last Visit:</span> <i>{{ humanizeTimestamp() }}</i></span>
-  <i class="small" ng-click="toggleVisitItems()">show entry details</i>
+  <span class="small only-expanded"><span class="grey">Last Visit:</span> <i>{{ humanizeTimestamp() }}</i></span>
+  <i class="small only-expanded" ng-click="toggleVisitItems()">show entry details</i>
 
-  <ul ng-show="showVisitItems">
+  <ul class="only-expanded" ng-show="showVisitItems">
     <li class="flexy" ng-repeat="visit in visitItems">
       <span class="small">{{ humanizeTimestamp(visit.visitTime) }}</span>
       <span class="small">{{ visit.transition }}</span>

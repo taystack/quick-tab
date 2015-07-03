@@ -1,12 +1,12 @@
-<div class="flexy grow">
+<div class="flexy grow h-align pad">
 <!--
   <div class=""
     ng-repeat="wItem in wItems">
     <window-item item="wItem"></window-item>
   </div> -->
-
+<!--
   <a ui-sref="windows">windows</a>
-  <div class="widget-container flexy space-a center grow">
+  <div class="widget-container flexy space-a center grow"> -->
 
 
 <!--     <div class="widget card-item no-shrink no-grow">
@@ -18,20 +18,21 @@
       </ul>
     </div>
  -->
-<!--     <div class="widget card-item no-shrink no-grow">
-      <div class="widget-title flexy">
+    <!-- <div class="widget card-item no-shrink no-grow"> -->
+<!--       <div class="widget-title flexy">
         <h3><a ui-sref="history" class="">History</a></h3>
       </div>
-
-      <ul>
+ -->
+      <history-items items="hItems"></history-items>
+    <!-- </div> -->
+<!--       <ul>
         <li class="widget-item"
             ng-repeat="item in hItems | filter:mainSearch | limitTo:5">
-          {{item.url}}
         </li>
       </ul>
-    </div>
+ -->
 
-    <div class="widget card-item no-shrink no-grow">
+<!--     <div class="widget card-item no-shrink no-grow">
       <div class="widget-title flexy">
         <h3><a ui-sref="downloads" class="">Downloads</a></h3>
       </div>
@@ -42,7 +43,7 @@
           {{item.url}}
         </li>
       </ul>
-    </div>
- -->
+    </div> -->
+
   </div>
 </div>

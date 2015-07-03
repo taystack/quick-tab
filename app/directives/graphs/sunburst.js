@@ -4,11 +4,18 @@ app
     restrict: 'EA',
     scope: {
       'data': '=',
+      'type': '=',
       'template-id': '@'
     },
+    transclude: true,
     templateUrl: 'app/templates/graphs/stub.html',
     link: function(scope, element, attrs) {
-      d3Service.d3().then(function(d3) {
+      scope.handleEvent = function(d) {
+        eventName = scope.type + 'ClickEvent'
+        scope.$emit(eventName, {data: d, type: scope.type});
+      }
+      scope.draw = function() {
+        d3Service.d3().then(function(d3) {
 
         var width = 450,
             height = 500,
@@ -20,7 +27,7 @@ app
         var y = d3.scale.sqrt()
             .range([0, radius]);
 
-        var color = d3.scale.category20();
+        var color = d3.scale.category20c();
 
         var svg = d3.select(element[0]).append("svg")
             .attr("width", width)
@@ -49,23 +56,25 @@ app
           .enter().append("path")
             .attr("d", arc)
             .attr("stroke", "#fff")
+            .attr("stroke-width", ".1px")
             .style("fill", function(d) { return color((d.children ? d : d.parent).url); })
             .on("click", click)
             .each(stash);
 
-        d3.selectAll("input").on("change", function change() {
-          var value = this.value === "count"
-              ? function() { return 1; }
-              : function(d) { return d.size; };
+        // d3.selectAll("input").on("change", function change() {
+        //   var value = this.value === "count"
+        //       ? function() { return 1; }
+        //       : function(d) { return d.size; };
 
-          path
-              .data(partition.value(value).nodes)
-            .transition()
-              .duration(1000)
-              .attrTween("d", arcTweenData);
-        });
+        //   path
+        //       .data(partition.value(value).nodes)
+        //     .transition()
+        //       .duration(1000)
+        //       .attrTween("d", arcTweenData);
+        // });
 
         function click(d) {
+          scope.handleEvent(d);
           node = d;
           path.transition()
             .duration(500)
@@ -114,6 +123,15 @@ app
           };
         }
       });
+      }
+
+      scope.draw();
+
+      scope.$on('redraw', function() {
+        console.log('Redraw?');
+        $($(element).find('svg')).remove();
+        scope.draw();
+      })
     }
   };
 }]);

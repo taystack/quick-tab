@@ -1,26 +1,77 @@
 .widget {
   height: 280px;
   @include flex-basis(40%);
-  background: rgba(#333, .5);
+  @include transition(flex-basis ease-in-out 150ms,
+                      height ease-in-out 150ms);
+  padding: 15px;
 
   h3 {
     padding-bottom: 10px;
   }
 
-  > * {
-    padding: 15px;
-    &:first-child {
-      padding-bottom: 0;
-    }
-    &:last-child {
-      padding-top: 0;
+  .widget-header {
+    margin-bottom: 10px;
+
+    .widget-filter {
+      input {
+        height: 20px;
+        font-size: 20px;
+        opacity: 0;
+        @include flex-basis(0px);
+        @include transition(flex-basis ease-out 550ms,
+                            opacity ease-out 150ms);
+
+        &.showing {
+          @include flex-basis(100%);
+          opacity: 1;
+        }
+      }
     }
   }
 
-  ul li {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 10px 0;
+  .graph svg {
+    margin-left: 200px;
+    @include flex-grow(1);
+    @include flex-shrink(0);
+    @include transform(scale(.5,.5));
+    @include transform-origin(0% 0%);
+    @include transition(margin linear 150ms,
+                        transform ease-out 550ms);
+    // position: absolute;
+  }
+  .graph-filler {
+    @include flex-basis(50%);
+  }
+
+  .content {
+    @include flex-basis(50%);
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .only-expanded {
+    line-height: 0;
+    opacity: 0;
+    @include transition(opacity linear 150ms,
+                        line-height linear 150ms);
+  }
+
+  .line-item {
+    margin-bottom: 5px;
+  }
+
+  &.focused {
+    height: 530px;
+    @include flex-basis(100%);
+    .graph svg {
+      margin-left: 100px;
+      @include transform(scale(1,1));
+    }
+    .content {
+    }
+    .only-expanded {
+      line-height: 20px;
+      opacity: 1;
+    }
   }
 }

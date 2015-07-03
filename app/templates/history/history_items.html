@@ -1,0 +1,28 @@
+<div class="widget card-item flexy col no-shrink no-grow"
+  ng-click="handleClick($event)">
+  <div class="widget-header flexy no-shrink space-b v-align">
+    <div class="flexy v-align grow">
+      <span class="large">Browsing History</span>
+      <div class="widget-filter ml4 mr4 flexy rel grow v-align">
+        <span class="abs fa fa-search ml4 mt8 cursor search-icon"
+              ng-click="showSearch()"
+              ng-class="{ 'hiding': (isSearching || isExpanded) }"></span>
+        <input ng-model="historyFilter"
+               ng-class="{'showing': (isSearching || isExpanded)}">
+      </div>
+    </div>
+    <div class="btn" ng-click="handleExpand()">
+      <div class="fa fa-{{ isExpanded ? 'compress' : 'expand' }}"></div>
+    </div>
+  </div>
+  <div class="flexy grow">
+    <div class="graph-filler grow">
+      <d3-sunburst data="flareData" type="'history'" class="graph flexy grow h-align"></d3-sunburst>
+    </div>
+    <div class="content flexy col grow">
+      <div ng-repeat="hItem in filteredItems = (items | filter:idFilter | filter:historyFilter)" class="no-shrink">
+        <history-item item="hItem"></history-item>
+      </div>
+    </div>
+  </div>
+</div>

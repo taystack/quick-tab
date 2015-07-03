@@ -50,7 +50,7 @@ app
       $scope.$digest();
     });
 
-    $scope.flareData = histograph.prepareFlareData($scope.hItems);
+    // $scope.flareData = histograph.prepareFlareData($scope.hItems);
 
     // Event Handlers;
     $scope.$on('filter', function($event, filter) {

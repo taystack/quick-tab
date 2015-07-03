@@ -1,13 +1,13 @@
 // Directives and animations.
 app
-.directive('historyitem', function() {
+.directive('historyItem', function() {
   return {
     restrict: 'EC',
     scope: {
       item: '='
     },
     transclude: true,
-    templateUrl: 'app/templates/history/HistoryItem.html',
+    templateUrl: 'app/templates/history/history_item.html',
     link: function(scope, el, attrs) {
       scope.visitItems = [];
 
